@@ -4,12 +4,12 @@
 //
 //  Created by Mena Haitham on 08/08/2023.
 //
-
 import Foundation
 
-struct Todo: Identifiable {
-    
+struct Todo: Identifiable, Codable {
     var id = UUID()
-    var title: String
+    var task: String
+    var subtask = ""
     var isCompleted = false
+    var dueDate: Date? = nil
 }
